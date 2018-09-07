@@ -43,21 +43,17 @@ class App extends Component {
   }
   render () {
     return (
-      <Wrapper>
-        {/* <div>
-          Score: {this.state.score}
-          Top Score: {this.state.topScore}
-        </div> */}
-        <Navbar score={this.state.score} topScore={this.state.topScore}/>
-        {this.state.images.map(image => (
-          <FriendCard
-          rearrange={this.rearrange}
-          name={image.name}
-          image={image.image}
-          id={image.id}
-          />
-        ))}
-      </Wrapper>
+        <Wrapper>
+          <Navbar score={this.state.score} topScore={this.state.topScore}/>
+          {this.state.images.map(image => (
+            <FriendCard
+            rearrange={this.rearrange}
+            name={image.name}
+            image={image.image}
+            id={image.id}
+            />
+          ))}
+        </Wrapper>
     );
   }
 }
